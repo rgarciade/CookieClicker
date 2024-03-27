@@ -8,7 +8,7 @@ export const iconStyle = css`
                 font-family: 'Material Icons';
                 font-weight: normal;
                 font-style: normal;
-                font-size: 24px;  /* Preferred icon size */
+                font-size: var(--icon-size,24px);  /* Preferred icon size */
                 display: inline-block;
                 line-height: 1;
                 text-transform: none;
@@ -16,6 +16,7 @@ export const iconStyle = css`
                 word-wrap: normal;
                 white-space: nowrap;
                 direction: ltr;
+                color: var(--icon-color, black);
 
                 /* Support for all WebKit browsers. */
                 -webkit-font-smoothing: antialiased;

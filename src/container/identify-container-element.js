@@ -37,13 +37,13 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
         return html`
             <div class="container">
                 <div class="bests">
-                    <h2>The Bests</h2>
+                    <h2><icon-element icon="star" color="blue" size="60px"></icon-element>The Bests</h2>
                     <ol>
                         ${this.getScoresHtml()}
                     </ol>
                 </div>
                 <input placeholder="Gamer Name" @input="${this._handleInput}"/>
-                <button-element text="Join game" @click="${this._joinGame}">Jugar</button-element>
+                <button-element text="Join game" @click="${this._joinGame}">Play</button-element>
             </div>
         `;
     }
