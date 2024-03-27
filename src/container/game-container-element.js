@@ -77,7 +77,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
                 this._updateClickerActualClickerPrice()
                 this._updateClickerBasicAutoClickerEnabled()
                 this._updateClickerMegaClickersActualClickerPrice()
-                this._updateClickerMegaClickersEnabled()
+                     this._updateClickerMegaClickersEnabled()
             }
         })
 

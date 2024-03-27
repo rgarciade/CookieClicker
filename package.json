@@ -9,6 +9,7 @@
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint '**/*.js'",
     "lint:lit-analyzer": "lit-analyzer my-element.js",
+    "lit:fix": "eslint . --fix",
     "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
     "analyze": "cem analyze --litelement --globs \"**/*.js\" --exclude docs",
     "analyze:watch": "cem analyze --litelement --globs \"**/*.js\" --exclude docs --watch",
@@ -20,6 +21,17 @@
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
     "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "keywords": [
     "web-components",
@@ -63,10 +75,12 @@
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "connect-history-api-fallback": "^2.0.0",
     "css-loader": "^6.10.0",
-    "eslint": "^8.15.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
     "jest": "^29.7.0",
     "jest-axe": "^7.0.0",
     "jest-environment-jsdom-global": "^4.0.0",
+    "lint-staged": "^15.2.2",
     "lit-analyzer": "^1.2.1",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
