@@ -14,10 +14,11 @@ export const ScoresState = (superClass) => {
 
         _scores_sortScores = () => {
             const newScores = Object.keys(this._scores_data).sort((a, b) => {
-                return this._scores_data[b] - this._scores_data[a];
-                this._scores_data = {...newScores};
-            })
-            localStorage.setItem(this._scores_storageName, JSON.stringify(this._scores_data));
+                return this._scores_data[b].value - this._scores_data[a].value;
+            }).map((name) => {
+                return this._scores_data[name];
+            });
+           return newScores;
         }
         _scores_updateScore = (name, data) => {
             this._scores_data[name] = {
@@ -25,10 +26,13 @@ export const ScoresState = (superClass) => {
                 value: data.value,
                 numberOfClickers: data.numberOfClickers
             }
-            this._scores_sortScores();
+            localStorage.setItem(this._scores_storageName, JSON.stringify(this._scores_data));
         }
         _scores_getScores = () => {
             return this._scores_data;
+        }
+        _scores_getScoresSorted= () => {
+            return this._scores_sortScores();
         }
         _scores_getScoreByName = (name) => {
             return this._scores_data[name]?? {playerName: name, value: 0, numberOfClickers: 0};

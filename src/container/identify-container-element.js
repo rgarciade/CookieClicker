@@ -5,8 +5,9 @@ import "../components/icon-element.js";
 import "../components/button-element.js";
 import {identifyStyle} from "./styles/identify-container-style.js";
 import {commonStyle} from "../styles/common.js";
+import {ScoresState} from "../status/index.js";
 
-export class IdentifyContainerElement extends LitElement {
+export class IdentifyContainerElement extends ScoresState(LitElement) {
     static get styles() {
         return [identifyStyle,commonStyle,
             css`
@@ -22,11 +23,13 @@ export class IdentifyContainerElement extends LitElement {
 
     }
     getScoresHtml(){
-        const scoresData = ''//scores.getScores();
-        return Object.keys(scoresData).sort(
+        const scoresData = this._scores_getScoresSorted();
+
+        return Object.keys(scoresData).slice(0, 4).sort(
             (a, b) => scoresData[b] - scoresData[a]
-        ).map((name, index) => {
-            const score = scoresData[name].value;
+        ).map((order, index) => {
+            const score = scoresData[order].value;
+            const name = scoresData[order].playerName;
             return html`<li>${name}: ${score}</li>`
         });
     }
