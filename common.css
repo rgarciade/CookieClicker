@@ -1,0 +1,9 @@
+:root {
+    --color-primario: blue;
+    --color-secundario: #2ecc71;
+    --spacing: 20px;
+}
+
+body {
+    margin: 0px;
+}
