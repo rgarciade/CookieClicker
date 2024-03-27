@@ -22,15 +22,15 @@
     "test:prod:watch": "MODE=prod wtr --watch",
     "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
       "git add"
+    ]
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npx eslint --fix"
     ]
   },
   "keywords": [
