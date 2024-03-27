@@ -50,24 +50,41 @@ export class GameContainerElement extends ScoresState(LitElement) {
         this.requestUpdate('basicAutoClickerEnabled',oldVal);
     }
 
+    _updateClickerMegaClickersActualClickerPrice(){
+        const oldVal = this.megaClickersActualClickerPrice;
+        this.megaClickersActualClickerPrice = this.clicker.nextClickerPrice(clickerTypes.MegaClickers);
+        this.requestUpdate('megaClickersActualClickerPrice',oldVal);
+    }
+    _updateClickerMegaClickersEnabled(){
+        const oldVal = this.megaClickersEnabled;
+        this.megaClickersEnabled = this.clicker.checkClickerEnabled(clickerTypes.MegaClickers);
+        this.requestUpdate('megaClickersEnabled',oldVal);
+    }
+
+
     constructor() {
         super();
         this.actualClickerPrice = 0
         this.counterValue = 0
         this.basicAutoClickerEnabled = false
 
+        this.megaClickersActualClickerPrice = 0
+        this.megaClickersEnabled = false
+
         this.clicker = new ClickerService({
             updateStatusFunction: (val)=>{
                 this._updateClickerActualValue()
                 this._updateClickerActualClickerPrice()
                 this._updateClickerBasicAutoClickerEnabled()
+                this._updateClickerMegaClickersActualClickerPrice()
+                this._updateClickerMegaClickersEnabled()
             }
         })
 
     }
     disconnectedCallback() {
-        // es importante destruir
-        // el servicio clicker para que no siga con el setInterval
+        // es importante destruir el servicio clicker
+        //  para que no siga con el setInterval
         this.clicker.dismount();
         super.disconnectedCallback();
     }
@@ -83,12 +100,16 @@ export class GameContainerElement extends ScoresState(LitElement) {
     buyClicker(){
         this.clicker.buyClicker(clickerTypes.BasicAutoClicker);
     }
+    buyMegaClicker(){
+        this.clicker.buyClicker(clickerTypes.MegaClickers);
+    }
     render() {
         return html`
             <nav-element href="/identify"> change player</nav-element>
             <input .value="${this.counterValue}">
             <button-element @click="${this.addOne}">add 1</button-element>
             <button ?disabled="${!this.basicAutoClickerEnabled}" @click="${this.buyClicker}">add clicker, price: ${this.actualClickerPrice}</button>
+            <button ?disabled="${!this.megaClickersEnabled}" @click="${this.buyMegaClicker}">add Mega clicker, price: ${this.megaClickersActualClickerPrice}</button>
         `;
     }
 
