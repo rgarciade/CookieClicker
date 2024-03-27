@@ -11,11 +11,20 @@ export const ScoresState = (superClass) => {
         disconnectedCallback() {
             super.disconnectedCallback();
         }
-
+        _formatNumber(num) {
+            if (num >= 1e6) {
+                return (num / 1e6).toFixed(2) + ' million';
+            } else if (num >= 1e3) {
+                return (num / 1e3).toFixed(2) + 'k';
+            } else {
+                return num.toString();
+            }
+        }
         _scores_sortScores = () => {
             const newScores = Object.keys(this._scores_data).sort((a, b) => {
                 return this._scores_data[b].value - this._scores_data[a].value;
             }).map((name) => {
+                this._scores_data[name].value = this._formatNumber(this._scores_data[name].value);
                 return this._scores_data[name];
             });
            return newScores;
