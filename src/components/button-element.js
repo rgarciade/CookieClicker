@@ -1,4 +1,4 @@
-import {LitElement,html,css} from "lit";
+import {LitElement,html} from "lit";
 import {buttonStyle} from "./styles/button-style.js";
 
 export class ButtonElement extends LitElement {
@@ -8,7 +8,6 @@ export class ButtonElement extends LitElement {
 
     render() {
         return html`
-            
             <button  @click="${this._onClick}"><slot></slot></button>
         `;
     }

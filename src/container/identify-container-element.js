@@ -1,5 +1,5 @@
 import {LitElement, html, css} from "lit";
-import {navigate} from "../components/nav-element.js";
+//import {navigate} from "../components/nav-element.js";
 //import {scores} from "/src/status/index.js";
 import "../components/icon-element.js";
 import "../components/button-element.js";
@@ -20,6 +20,7 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
     constructor() {
         super();
         this.gamerName = '';
+        this.haveError = false;
 
     }
     getScoresHtml(){
@@ -27,22 +28,30 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 
         return Object.keys(scoresData).slice(0, 4).sort(
             (a, b) => scoresData[b] - scoresData[a]
-        ).map((order, index) => {
+        ).map((order) => {
             const score = scoresData[order].value;
             const name = scoresData[order].playerName;
             return html`<li>${name}: ${score}</li>`
         });
     }
+    IsErrorName(){
+       return  this.haveError ? html`<span class="error-span" >*Escribe un nombre correcto</span>` : ''
+    }
+
     render() {
         return html`
+            <div class="title">
+                <h2><icon-element icon="star" color="blue" size="60px"></icon-element>The Bests</h2>
+            </div>
+            
             <div class="container">
                 <div class="bests">
-                    <h2><icon-element icon="star" color="blue" size="60px"></icon-element>The Bests</h2>
                     <ol>
                         ${this.getScoresHtml()}
                     </ol>
                 </div>
                 <input placeholder="Gamer Name" @input="${this._handleInput}"/>
+                ${this.IsErrorName()}
                 <button-element text="Join game" @click="${this._joinGame}">Play</button-element>
             </div>
         `;
@@ -52,7 +61,14 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
         this.gamerName = event.target.value;
     }
     _joinGame(){
-        if(!this.gamerName) return;
+        if(!this.gamerName){
+
+            const oldVal = this.haveError;
+            this.haveError = true;
+            this.requestUpdate('haveError',oldVal);
+            return
+
+        }
         this.dispatchEvent(new CustomEvent('router-navigate', {
             detail: '/game?name=' + encodeURIComponent(this.gamerName),
             bubbles: true,
