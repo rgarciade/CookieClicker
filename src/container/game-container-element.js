@@ -5,6 +5,7 @@ import { commonStyle } from '../styles/common.js';
 import ClickerService from '../services/clicker/clicker-service.js';
 import clickerTypes from '../services/clicker/clicker-types.js';
 import '../components/nav-element.js';
+import '../components/game-title-element.js';
 import { ScoresState } from '../status/index.js';
 
 export class GameContainerElement extends ScoresState(LitElement) {
@@ -115,10 +116,28 @@ export class GameContainerElement extends ScoresState(LitElement) {
 	buyMegaClicker() {
 		this.clicker.buyClicker(clickerTypes.MegaClickers);
 	}
+	navegate(path) {
+		this.dispatchEvent(
+			new CustomEvent('router-navigate', {
+				detail: path,
+				bubbles: true,
+				composed: true,
+			})
+		);
+	}
 	render() {
 		return html`
-			<nav-element href="/identify">change player</nav-element>
-
+			<game-title-element backgroundColor="#262626">
+				<icon-element icon="person" color="white" size="60px"></icon-element>
+				<p>${this.name}</p>
+				<icon-element
+					class="go-identify"
+					icon="logout"
+					color="white"
+					size="80px"
+					@click="${() => this.navegate('/identify')}"
+				></icon-element>
+			</game-title-element>
 			<div class="container">
 				<div class="game-text">
 					<p>Merge Pull Request: <span>${this.counterValue}</span></p>
@@ -126,7 +145,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 				</div>
 
 				<button-element @click="${this.addOne}" width="10em">
-					<icon-element icon="merge_type" size="50px"></icon-element>
+					<icon-element icon="merge_type" size="70px"></icon-element>
 					Add 1
 				</button-element>
 				<div class="auto-clicker-group">
@@ -135,7 +154,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 						@click="${this.buyClicker}"
 						fontSize="1em"
 					>
-						<icon-element icon="merge_type" size="50px"></icon-element>
+						<icon-element icon="merge_type" size="70px"></icon-element>
 						Add clicker: ${this.actualClickerPrice}
 					</button-element>
 					<button-element
@@ -143,7 +162,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 						@click="${this.buyMegaClicker}"
 						fontSize="1em"
 					>
-						<icon-element icon="merge_type" size="50px"></icon-element>
+						<icon-element icon="merge_type" size="70px"></icon-element>
 						Add Mega clicker: ${this.megaClickersActualClickerPrice}
 					</button-element>
 				</div>

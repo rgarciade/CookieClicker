@@ -50,7 +50,7 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 		return html`
 			<div class="title">
 				<h2>
-					<icon-element icon="star" color="blue" size="60px"></icon-element>
+					<icon-element icon="star" color="blue" size="120px"></icon-element>
 					The Bests
 				</h2>
 			</div>
@@ -59,9 +59,9 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 				<div class="bests">${this.getScoresHtml()}</div>
 				<input placeholder="Gamer Name" @input="${this._handleInput}" />
 				${this.IsErrorName()}
-				<button-element text="Join game" @click="${this._joinGame}"
-					>Play</button-element
-				>
+				<button-element text="Join game" @click="${this._joinGame}" width="6em">
+					Play
+				</button-element>
 			</div>
 		`;
 	}

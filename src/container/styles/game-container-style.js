@@ -27,4 +27,7 @@ export const gameStyle = css`
 		margin-bottom: 5px;
 		margin-top: 5px;
 	}
+	.go-identify {
+		cursor: pointer;
+	}
 `;

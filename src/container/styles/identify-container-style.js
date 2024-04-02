@@ -11,7 +11,7 @@ export const identifyStyle = css`
 		gap: 80px;
 	}
 	.bests {
-		min-height: 25vh;
+		min-height: 34vh;
 	}
 	.title {
 		font-size: 110px;
