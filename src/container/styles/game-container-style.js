@@ -13,9 +13,18 @@ export const gameStyle = css`
 	.auto-clicker-group {
 		display: flex;
 		gap: 20px;
+		max-width: 19em;
 	}
 	.game-text {
 		font-size: 60px;
 		margin: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.game-text p {
+		margin-bottom: 5px;
+		margin-top: 5px;
 	}
 `;

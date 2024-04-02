@@ -50,8 +50,8 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 		return html`
 			<div class="title">
 				<h2>
-					<icon-element icon="star" color="blue" size="60px"></icon-element>The
-					Bests
+					<icon-element icon="star" color="blue" size="60px"></icon-element>
+					The Bests
 				</h2>
 			</div>
 

@@ -2,8 +2,12 @@
     --color-primario: blue;
     --color-secundario: #2ecc71;
     --spacing: 20px;
+    --text-color: white;
+    --background-color: black;
 }
 
 body {
     margin: 0px;
+    background-color: var(--background-color, white);
+    color: var(--text-color, black);
 }

@@ -67,11 +67,17 @@ export class GameContainerElement extends ScoresState(LitElement) {
 		);
 		this.requestUpdate('megaClickersEnabled', oldVal);
 	}
+	_updateNumberOfClickers() {
+		const oldVal = this.clicker.numberOfClickers;
+		this.numberOfClickers = this.clicker.numberOfClickers;
+		this.requestUpdate('numberOfClickers', oldVal);
+	}
 
 	constructor() {
 		super();
 		this.actualClickerPrice = 0;
 		this.counterValue = 0;
+		this.numberOfClickers = 0;
 		this.basicAutoClickerEnabled = false;
 
 		this.megaClickersActualClickerPrice = 0;
@@ -84,6 +90,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 				this._updateClickerBasicAutoClickerEnabled();
 				this._updateClickerMegaClickersActualClickerPrice();
 				this._updateClickerMegaClickersEnabled();
+				this._updateNumberOfClickers();
 			},
 		});
 	}
@@ -113,9 +120,11 @@ export class GameContainerElement extends ScoresState(LitElement) {
 			<nav-element href="/identify">change player</nav-element>
 
 			<div class="container">
-				<p class="game-text">
-					Merge Pull Request: <span>${this.counterValue}</span>
-				</p>
+				<div class="game-text">
+					<p>Merge Pull Request: <span>${this.counterValue}</span></p>
+					<p>Auto mergers: ${this.numberOfClickers}</p>
+				</div>
+
 				<button-element @click="${this.addOne}" width="10em">
 					<icon-element icon="merge_type" size="50px"></icon-element>
 					Add 1
@@ -124,7 +133,6 @@ export class GameContainerElement extends ScoresState(LitElement) {
 					<button-element
 						?disabled="${!this.basicAutoClickerEnabled}"
 						@click="${this.buyClicker}"
-						width="8.5em"
 						fontSize="1em"
 					>
 						<icon-element icon="merge_type" size="50px"></icon-element>
@@ -133,7 +141,6 @@ export class GameContainerElement extends ScoresState(LitElement) {
 					<button-element
 						?disabled="${!this.megaClickersEnabled}"
 						@click="${this.buyMegaClicker}"
-						width="10em"
 						fontSize="1em"
 					>
 						<icon-element icon="merge_type" size="50px"></icon-element>
