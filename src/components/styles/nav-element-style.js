@@ -1,8 +1,8 @@
-import {css} from "lit";
+import { css } from 'lit';
 
 export const navStyle = css`
-        a{
-            text-decoration: none;
-            color: blue;
-        }
-`
+	a {
+		text-decoration: none;
+		color: blue;
+	}
+`;
