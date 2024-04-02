@@ -11,7 +11,7 @@ export const identifyStyle = css`
             gap: 80px;
         }
         .bests{
-            min-height: 29vh;
+            min-height: 25vh;
         }
         .title {
             font-size: 56px;
@@ -20,9 +20,7 @@ export const identifyStyle = css`
             justify-content: center;
             align-items: center;
         }
-        ol {
-            margin-left: 1em;
-        }
+
         .error-span{
             font-size: 20px;
             color: red;

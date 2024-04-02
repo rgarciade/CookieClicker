@@ -25,14 +25,16 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
     }
     getScoresHtml(){
         const scoresData = this._scores_getScoresSorted();
+        if(scoresData.length === 0) return html`<p>No scores yet</p>`;
 
-        return Object.keys(scoresData).slice(0, 4).sort(
+        const htmlList = Object.keys(scoresData).slice(0, 4).sort(
             (a, b) => scoresData[b] - scoresData[a]
         ).map((order) => {
             const score = scoresData[order].value;
             const name = scoresData[order].playerName;
             return html`<li>${name}: ${score}</li>`
         });
+        return html`<ol>${htmlList}</ol>`;
     }
     IsErrorName(){
        return  this.haveError ? html`<span class="error-span" >*Escribe un nombre correcto</span>` : ''
@@ -40,15 +42,13 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 
     render() {
         return html`
-            <div class="title">
+            <div class="title" >
                 <h2><icon-element icon="star" color="blue" size="60px"></icon-element>The Bests</h2>
             </div>
             
             <div class="container">
-                <div class="bests">
-                    <ol>
-                        ${this.getScoresHtml()}
-                    </ol>
+                <div class="bests" >
+                    ${this.getScoresHtml()}
                 </div>
                 <input placeholder="Gamer Name" @input="${this._handleInput}"/>
                 ${this.IsErrorName()}
