@@ -4,7 +4,7 @@ import {gameStyle} from "./styles/game-container-style.js";
 import {commonStyle} from "../styles/common.js";
 import ClickerService  from "../services/clicker/clicker-service.js";
 import  clickerTypes  from "../services/clicker/clicker-types.js";
-import "../components/button-element.js";
+import "../components/nav-element.js";
 import {ScoresState} from "../status/index.js";
 
 
@@ -72,12 +72,12 @@ export class GameContainerElement extends ScoresState(LitElement) {
         this.megaClickersEnabled = false
 
         this.clicker = new ClickerService({
-            updateStatusFunction: (val)=>{
+            updateStatusFunction: ()=>{
                 this._updateClickerActualValue()
                 this._updateClickerActualClickerPrice()
                 this._updateClickerBasicAutoClickerEnabled()
                 this._updateClickerMegaClickersActualClickerPrice()
-                     this._updateClickerMegaClickersEnabled()
+                this._updateClickerMegaClickersEnabled()
             }
         })
 
@@ -105,11 +105,37 @@ export class GameContainerElement extends ScoresState(LitElement) {
     }
     render() {
         return html`
-            <nav-element href="/identify"> change player</nav-element>
-            <input .value="${this.counterValue}">
-            <button-element @click="${this.addOne}">add 1</button-element>
-            <button ?disabled="${!this.basicAutoClickerEnabled}" @click="${this.buyClicker}">add clicker, price: ${this.actualClickerPrice}</button>
-            <button ?disabled="${!this.megaClickersEnabled}" @click="${this.buyMegaClicker}">add Mega clicker, price: ${this.megaClickersActualClickerPrice}</button>
+            <nav-element href="/identify">change player</nav-element>
+           
+            <div class="container">
+                <p class="game-text">Merge Pull Request: <span>${this.counterValue}</span></p>
+                <button-element @click="${this.addOne}" width="10em" >
+                    <icon-element icon="merge_type" size="50px"></icon-element>
+                    Add 1
+                </button-element>
+                <div class="auto-clicker-group">
+                    <button-element
+                        ?disabled="${!this.basicAutoClickerEnabled}" 
+                        @click="${this.buyClicker}"
+                        width="8.5em"
+                        fontSize="1em"
+                    >
+                        <icon-element icon="merge_type" size="50px"></icon-element>
+                        Add clicker: ${this.actualClickerPrice}
+                    </button-element>
+                    <button-element 
+                        ?disabled="${!this.megaClickersEnabled}" 
+                        @click="${this.buyMegaClicker}"
+                        width="10em"
+                        fontSize="1em"
+                    >
+                        <icon-element icon="merge_type" size="50px"></icon-element>
+                        Add Mega clicker: ${this.megaClickersActualClickerPrice}
+                    </button-element>
+                </div>
+
+            </div>
+
         `;
     }
 

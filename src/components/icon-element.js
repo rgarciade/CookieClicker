@@ -1,4 +1,4 @@
-import {LitElement,html,css} from "lit";
+import {LitElement,html} from "lit";
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import {iconStyle} from "./styles/icon-style.js";
 export class IconElement extends LitElement {
