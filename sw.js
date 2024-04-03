@@ -32,9 +32,11 @@ self.addEventListener('fetch', function (event) {
 				}
 				fetch(event.request).then(r => {
 					return r;
-				})
+				}).catch(e => {
+					console.error('fetch error1', e);
+				});
 			}catch (e) {
-				console.error('fetch error', e);
+				console.error('fetch error2', e);
 			};
 		})
 	);
