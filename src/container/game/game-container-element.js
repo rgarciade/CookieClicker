@@ -129,8 +129,6 @@ export class GameContainerElement extends ScoresState(LitElement) {
 				<icon-element
 					class="go-identify"
 					icon="logout"
-					color="white"
-					size="80px"
 					@click="${() => this.navegate('/identify')}"
 				></icon-element>
 			</game-title-element>

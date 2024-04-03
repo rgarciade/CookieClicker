@@ -13,6 +13,7 @@ export class ButtonElement extends LitElement {
 			width: { type: String },
 			type: { type: String },
 			lengthType: { type: String },
+			disabled: { type: Boolean },
 		};
 	}
 

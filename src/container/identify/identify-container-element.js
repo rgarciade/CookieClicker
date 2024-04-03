@@ -1,6 +1,4 @@
-import { LitElement, html, css } from 'lit';
-//import {navigate} from "../components/nav-element.js";
-//import {scores} from "/src/status/index.js";
+import { LitElement, html } from 'lit';
 import '../../components/icon/icon-element.js';
 import '../../components/button/button-element.js';
 import { identifyStyle } from './identify-container-style.js';
@@ -9,15 +7,7 @@ import { ScoresState } from '../../status/index.js';
 
 export class IdentifyContainerElement extends ScoresState(LitElement) {
 	static get styles() {
-		return [
-			identifyStyle,
-			commonStyle,
-			css`
-				input {
-					min-width: 400px;
-				}
-			`,
-		];
+		return [identifyStyle, commonStyle];
 	}
 	constructor() {
 		super();
@@ -57,8 +47,8 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 
 			<div class="container">
 				<div class="bests">${this.getScoresHtml()}</div>
-				<input placeholder="Gamer Name" @input="${this._handleInput}" />
 				${this.IsErrorName()}
+				<input placeholder="Gamer Name" @input="${this._handleInput}" />
 				<button-element
 					class="play-button"
 					text="Join game"

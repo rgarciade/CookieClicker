@@ -10,6 +10,9 @@ export const identifyStyle = css`
 		font-size: 56px;
 		gap: 80px;
 	}
+	input {
+		min-width: 7em;
+	}
 	.bests {
 		min-height: 34vh;
 	}
@@ -29,7 +32,7 @@ export const identifyStyle = css`
 	}
 
 	.error-span {
-		font-size: 20px;
+		font-size: 40px;
 		color: red;
 		font-weight: 600;
 	}
