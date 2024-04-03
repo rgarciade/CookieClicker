@@ -1,6 +1,6 @@
 const cacheElements = [
 	'/',
-	'/bundle.js',
+	'/645.bundle.js',
 	'/sw.js',
 	'/identify',
 	'/game',
