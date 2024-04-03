@@ -7,10 +7,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 console.log('isProduction', process.env.NODE_ENV );
 export default {
-	mode: 'production',
+	mode: isProduction ? 'production' : 'development',
 	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, '_site'),
 		filename: 'bundle.js',
 	},
 	module: {
