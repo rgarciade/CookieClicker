@@ -26,7 +26,16 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
 	event.respondWith(
 		caches.match(event.request).then(function (response) {
-			return response || fetch(event.request);
+			try {
+				if (response) {
+					return response;
+				}
+				fetch(event.request).then(r => {
+					return r;
+				})
+			}catch (e) {
+				console.error('fetch error', e);
+			};
 		})
 	);
 });
