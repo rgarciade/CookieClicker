@@ -46,7 +46,6 @@ export default {
 			patterns: [
 				{ from: 'public', to: 'public' },
 				{ from: 'sw.js', to: 'sw.js' },
-				{ from: 'manifest.json', to: 'manifest.json' },
 				{ from: 'common.css', to: 'common.css' },
 			],
 		}),
