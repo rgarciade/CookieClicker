@@ -33,10 +33,12 @@ export const gameStyle = css`
 	.small-clicker {
 		--button-height: 5.6em;
 		--button-font-size: 40px;
+		--icon-size: 70px;
 	}
 	.big-clicker {
 		--button-height: 5.6em;
 		--button-font-size: 40px;
+		--icon-size: 70px;
 	}
 	.game-title {
 		--background-color: #262626;

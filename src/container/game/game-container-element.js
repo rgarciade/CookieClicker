@@ -124,7 +124,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 	render() {
 		return html`
 			<game-title-element class="game-title">
-				<icon-element icon="person" color="white" size="60px"></icon-element>
+				<icon-element icon="person"></icon-element>
 				<p>${this.name}</p>
 				<icon-element
 					class="go-identify"
@@ -140,8 +140,8 @@ export class GameContainerElement extends ScoresState(LitElement) {
 					<p>Auto mergers: ${this.numberOfClickers}</p>
 				</div>
 
-				<button-element @click="${this.addOne}" width="10em">
-					<icon-element icon="merge_type" size="70px"></icon-element>
+				<button-element @click="${this.addOne}">
+					<icon-element icon="merge_type"></icon-element>
 					Add 1
 				</button-element>
 				<div class="auto-clicker-group">
@@ -150,7 +150,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 						?disabled="${!this.basicAutoClickerEnabled}"
 						@click="${this.buyClicker}"
 					>
-						<icon-element icon="merge_type" size="70px"></icon-element>
+						<icon-element icon="merge_type"></icon-element>
 						Add clicker: ${this.actualClickerPrice}
 					</button-element>
 					<button-element
@@ -158,7 +158,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 						?disabled="${!this.megaClickersEnabled}"
 						@click="${this.buyMegaClicker}"
 					>
-						<icon-element icon="merge_type" size="70px"></icon-element>
+						<icon-element icon="merge_type"></icon-element>
 						Add Mega clicker: ${this.megaClickersActualClickerPrice}
 					</button-element>
 				</div>

@@ -40,4 +40,7 @@ export const identifyStyle = css`
 	.play-button {
 		--button-width: 5.7em;
 	}
+	.icon-start {
+		--icon-color: red;
+	}
 `;
