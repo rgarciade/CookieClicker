@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { navStyle } from './styles/nav-element-style.js';
+import { navStyle } from './nav-element-style.js';
 
 export class NavElement extends LitElement {
 	/**
@@ -36,20 +36,5 @@ export class NavElement extends LitElement {
 		`;
 	}
 }
-
-/**
- *
- * @param that - this ref to the element that dispatches the event.
- * @param href - The link to navigate.
- */
-export const navigate = (elementRef, href) => {
-	elementRef.dispatchEvent(
-		new CustomEvent('router-navigate', {
-			detail: href,
-			bubbles: true,
-			composed: true,
-		})
-	);
-};
 
 window.customElements.define('nav-element', NavElement);

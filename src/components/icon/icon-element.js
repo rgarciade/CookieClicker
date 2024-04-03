@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-import { iconStyle } from './styles/icon-style.js';
+import { iconStyle } from './icon-style.js';
 export class IconElement extends LitElement {
 	/**
 	 * @property {String} icon - Icon name from material design.

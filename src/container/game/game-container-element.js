@@ -1,12 +1,13 @@
 import { LitElement, html } from 'lit';
-import '../components/button-element.js';
-import { gameStyle } from './styles/game-container-style.js';
-import { commonStyle } from '../styles/common.js';
-import ClickerService from '../services/clicker/clicker-service.js';
-import clickerTypes from '../services/clicker/clicker-types.js';
-import '../components/nav-element.js';
-import '../components/game-title-element.js';
-import { ScoresState } from '../status/index.js';
+import '../../components/button/button-element.js';
+import { gameStyle } from './game-container-style.js';
+import { commonStyle } from '../../styles/common.js';
+import ClickerService from '../../services/clicker/clicker-service.js';
+import clickerTypes from '../../services/clicker/clicker-types.js';
+import '../../components/nav/nav-element.js';
+import '../../components/gameTitle/game-title-element.js';
+import { ScoresState } from '../../status/index.js';
+import { navigate } from '../../services/navigate/navigate-service.js';
 
 export class GameContainerElement extends ScoresState(LitElement) {
 	static get styles() {
@@ -117,13 +118,8 @@ export class GameContainerElement extends ScoresState(LitElement) {
 		this.clicker.buyClicker(clickerTypes.MegaClickers);
 	}
 	navegate(path) {
-		this.dispatchEvent(
-			new CustomEvent('router-navigate', {
-				detail: path,
-				bubbles: true,
-				composed: true,
-			})
-		);
+		// en identify-container e usado otra forma de navegar, para probar varios conceptos
+		navigate(this, path);
 	}
 	render() {
 		return html`

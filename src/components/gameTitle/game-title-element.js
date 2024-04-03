@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
-import './icon-element.js';
-import { gameTitleStyle } from './styles/game-title-style.js';
+import '../icon/icon-element.js';
+import { gameTitleStyle } from './game-title-style.js';
 
 export class GameTitleElement extends LitElement {
 	static get styles() {

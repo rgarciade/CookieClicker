@@ -6,4 +6,5 @@ module.exports = {
         '^.+\\.mjs$': 'babel-jest',
     },
     transformIgnorePatterns: [],
+    testMatch: ['<rootDir>/src/**/*.test.js'],
 };

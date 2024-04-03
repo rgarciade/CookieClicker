@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit';
 //import {navigate} from "../components/nav-element.js";
 //import {scores} from "/src/status/index.js";
-import '../components/icon-element.js';
-import '../components/button-element.js';
-import { identifyStyle } from './styles/identify-container-style.js';
-import { commonStyle } from '../styles/common.js';
-import { ScoresState } from '../status/index.js';
+import '../../components/icon/icon-element.js';
+import '../../components/button/button-element.js';
+import { identifyStyle } from './identify-container-style.js';
+import { commonStyle } from '../../styles/common.js';
+import { ScoresState } from '../../status/index.js';
 
 export class IdentifyContainerElement extends ScoresState(LitElement) {
 	static get styles() {
@@ -76,6 +76,7 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 			this.requestUpdate('haveError', oldVal);
 			return;
 		}
+		// en game-container e usado otra forma de navegar, para probar varios conceptos
 		this.dispatchEvent(
 			new CustomEvent('router-navigate', {
 				detail: '/game?name=' + encodeURIComponent(this.gamerName),

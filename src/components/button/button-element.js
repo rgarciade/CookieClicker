@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { buttonStyle } from './styles/button-style.js';
+import { buttonStyle } from './button-style.js';
 
 export class ButtonElement extends LitElement {
 	static get styles() {

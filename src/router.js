@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { Routes } from '@lit-labs/router';
-import './container/game-container-element.js';
-import './container/identify-container-element.js';
+import './container/game/game-container-element.js';
+import './container/identify/identify-container-element.js';
 
 const appRoutes = [
 	{ path: '/identify', render: () => html` <identify-container-element />` },
