@@ -15,9 +15,12 @@ self.addEventListener('install', function (event) {
 	event.waitUntil(
 		caches.has(CACHE_NAME).then(function (cacheExists) {
 			if (!cacheExists) {
-				return caches.open(CACHE_NAME).then(function (cache) {
+				caches.open(CACHE_NAME).then(function (cache) {
 					console.log('Opened cache', cacheElements);
-					return cache.addAll(cacheElements).catch((file) =>console.error('fileerror', file))
+					for (let i = 0; i < cacheElements.length; i++) {
+						const file = cacheElements[i]
+						cache.add(file).catch((error) =>console.error('fileerror', file,error))
+					}
 				});
 			}
 		})
