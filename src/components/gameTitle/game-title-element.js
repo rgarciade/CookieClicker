@@ -6,30 +6,9 @@ export class GameTitleElement extends LitElement {
 	static get styles() {
 		return [gameTitleStyle];
 	}
-	/**
-	 * @property {backgroundColor} width - Background color of the button.
-	 */
-	static get properties() {
-		return {
-			backgroundColor: { type: String },
-		};
-	}
-
-	get GameTitleBackgroundColor() {
-		return this.backgroundColor
-			? `--background-color: ${this.backgroundColor};`
-			: '';
-	}
 
 	render() {
-		return html`
-			<style>
-				:host {
-				   ${this.GameTitleBackgroundColor}
-				}
-			</style>
-			<slot></slot>
-		`;
+		return html` <slot></slot> `;
 	}
 }
 

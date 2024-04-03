@@ -123,7 +123,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 	}
 	render() {
 		return html`
-			<game-title-element backgroundColor="#262626">
+			<game-title-element class="game-title">
 				<icon-element icon="person" color="white" size="60px"></icon-element>
 				<p>${this.name}</p>
 				<icon-element

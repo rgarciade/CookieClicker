@@ -38,4 +38,7 @@ export const gameStyle = css`
 		--button-height: 5.6em;
 		--button-font-size: 40px;
 	}
+	.game-title {
+		--background-color: #262626;
+	}
 `;
