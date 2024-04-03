@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <title>Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=0.4, minimum-scale=0.4, user-scalable=no">
-    <link rel="icon" href="public/icons/20.png" type="image/png">
+    <link rel="icon" href="/public/icons/20.png" type="image/png">
     <meta name="theme-color" content="var(--color-primario);"/>
     <link rel="stylesheet" href="/common.css">
+    <link rel="manifest" href="/manifest.json">
 </head>
   <body>
       <router-element />
   </body>
+    <script>
+        if (location.protocol === 'https:') {
+            navigator.serviceWorker.getRegistration('./').then(function(registration) {
+                if (!registration) {
+                    navigator.serviceWorker.register('/sw.js', {
+                        scope: './'
+                    });
+                }
+            });
+        }
+    </script>
 </html>

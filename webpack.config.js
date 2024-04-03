@@ -42,6 +42,8 @@ export default {
 		new CopyWebpackPlugin({
 			patterns: [
 				{ from: 'public', to: 'public' },
+				{ from: 'sw.js', to: 'sw.js' },
+				{ from: 'manifest.json', to: 'manifest.json' },
 				{ from: 'common.css', to: 'common.css' },
 			],
 		}),
@@ -50,9 +52,9 @@ export default {
 		static: {
 			directory: path.join(__dirname, 'dist'),
 		},
-		server: 'https',
+		server: 'http',
 		compress: true,
-		port: 9000,
+		port: 9003,
 		historyApiFallback: true,
 		hot: false,
 	},

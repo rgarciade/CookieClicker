@@ -8,33 +8,17 @@ export class IconElement extends LitElement {
 	static get properties() {
 		return {
 			icon: { type: String },
-			size: { type: String },
-			color: { type: String },
 		};
 	}
 	static get styles() {
 		return [iconStyle];
-	}
-	get sizeCss() {
-		return this.size ? `--icon-size: ${this.size};` : '';
-	}
-	get colorCss() {
-		return this.color ? `--icon-color: ${this.color};` : '';
 	}
 
 	constructor() {
 		super();
 	}
 	render() {
-		return html`
-			<style>
-				:host {
-				    ${this.colorCss};
-				    ${this.sizeCss}
-				}
-			</style>
-			<i class="material-icons">${this.icon}</i>
-		`;
+		return html` <i class="material-icons">${this.icon}</i> `;
 	}
 }
 window.customElements.define('icon-element', IconElement);

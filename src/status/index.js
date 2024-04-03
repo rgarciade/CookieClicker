@@ -15,7 +15,7 @@ export const ScoresState = (superClass) => {
 			} else if (num >= 1e3) {
 				return (num / 1e3).toFixed(2) + 'k';
 			} else {
-				return num.toString();
+				return num?.toString();
 			}
 		}
 		_scores_sortScores = () => {
