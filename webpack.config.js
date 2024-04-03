@@ -9,6 +9,7 @@ export default {
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/CookieClicker/',
 		filename: 'bundle.js',
 	},
 	module: {
