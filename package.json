@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "webpack",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint '**/*.js'",
