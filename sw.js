@@ -5,7 +5,7 @@ const cacheElements = [
 	'/identify',
 	'/game',
 	'/common.css',
-	'/manifest.json',
+	'/public/manifest.json',
 	'src_router_js.bundle.js',
 	'node_modules_urlpattern-polyfill_index_js.bundle.js',
 ];
@@ -17,7 +17,7 @@ self.addEventListener('install', function (event) {
 			if (!cacheExists) {
 				return caches.open(CACHE_NAME).then(function (cache) {
 					console.log('Opened cache', cacheElements);
-					return cache.addAll(cacheElements);
+					return cache.addAll(cacheElements).catch((file) =>console.error('fileerror', file))
 				});
 			}
 		})
