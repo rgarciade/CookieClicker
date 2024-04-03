@@ -12,6 +12,7 @@ export default {
 	output: {
 		path: path.resolve(__dirname, '_site'),
 		filename: 'bundle.js',
+		publicPath: '/',
 	},
 	module: {
 		rules: [
