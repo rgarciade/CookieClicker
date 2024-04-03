@@ -30,4 +30,12 @@ export const gameStyle = css`
 	.go-identify {
 		cursor: pointer;
 	}
+	.small-clicker {
+		--button-height: 5.6em;
+		--button-font-size: 40px;
+	}
+	.big-clicker {
+		--button-height: 5.6em;
+		--button-font-size: 40px;
+	}
 `;

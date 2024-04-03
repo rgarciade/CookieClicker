@@ -146,17 +146,17 @@ export class GameContainerElement extends ScoresState(LitElement) {
 				</button-element>
 				<div class="auto-clicker-group">
 					<button-element
+						class="small-clicker"
 						?disabled="${!this.basicAutoClickerEnabled}"
 						@click="${this.buyClicker}"
-						fontSize="1em"
 					>
 						<icon-element icon="merge_type" size="70px"></icon-element>
 						Add clicker: ${this.actualClickerPrice}
 					</button-element>
 					<button-element
+						class="big-clicker"
 						?disabled="${!this.megaClickersEnabled}"
 						@click="${this.buyMegaClicker}"
-						fontSize="1em"
 					>
 						<icon-element icon="merge_type" size="70px"></icon-element>
 						Add Mega clicker: ${this.megaClickersActualClickerPrice}

@@ -11,32 +11,37 @@ export class ButtonElement extends LitElement {
 	static get properties() {
 		return {
 			width: { type: String },
-			height: { type: String },
-			fontSize: { type: String },
-			disabled: { type: Boolean },
+			type: { type: String },
+			lengthType: { type: String },
 		};
 	}
 
-	get buttonWidth() {
-		return this.width ? `--button-width: ${this.width};` : '';
+	constructor() {
+		super();
+		this.buttonTypes = {
+			primary: 'primary',
+			secondary: 'secondary',
+		};
+		this.buttonLengthType = {
+			long: 'long',
+			short: 'short',
+		};
 	}
-	get buttonHeight() {
-		return this.height ? `--button-height: ${this.height};` : '';
-	}
-	get buttonFontSize() {
-		return this.fontSize ? `--button-font-size: ${this.fontSize};` : '';
-	}
+
+	buttonType = () => {
+		const typeCss = this.buttonTypes[this.type] ?? this.buttonTypes['primary'];
+		const buttonLength =
+			this.buttonLengthType[this.lengthType] ?? this.buttonLengthType['long'];
+		return `${typeCss} ${buttonLength}`;
+	};
 
 	render() {
 		return html`
-			<style>
-				:host {
-				   ${this.buttonWidth}
-				   ${this.buttonHeight}
-				   ${this.buttonFontSize}
-				}
-			</style>
-			<button ?disabled="${this.disabled}" @click="${this._onClick}">
+			<button
+				class="${this.buttonType()}"
+				?disabled="${this.disabled}"
+				@click="${this._onClick}"
+			>
 				<slot></slot>
 			</button>
 		`;

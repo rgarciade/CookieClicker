@@ -59,7 +59,11 @@ export class IdentifyContainerElement extends ScoresState(LitElement) {
 				<div class="bests">${this.getScoresHtml()}</div>
 				<input placeholder="Gamer Name" @input="${this._handleInput}" />
 				${this.IsErrorName()}
-				<button-element text="Join game" @click="${this._joinGame}" width="6em">
+				<button-element
+					class="play-button"
+					text="Join game"
+					@click="${this._joinGame}"
+				>
 					Play
 				</button-element>
 			</div>

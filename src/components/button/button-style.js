@@ -14,9 +14,22 @@ export const buttonStyle = css`
 		margin: 4px 2px;
 		cursor: pointer;
 		width: var(--button-width, '2px');
+		min-width: var(--button-width, '2px');
 		height: var(--button-height, '2px');
 	}
 	button:disabled {
 		background-color: grey;
+	}
+	.primary {
+		background-color: var(--color-primario, blue);
+	}
+	.secondary {
+		background-color: var(--color-secundario, red);
+	}
+	.long {
+		width: 100%;
+	}
+	.short {
+		width: 50%;
 	}
 `;

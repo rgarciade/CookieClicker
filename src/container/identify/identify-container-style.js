@@ -37,4 +37,7 @@ export const identifyStyle = css`
 		font-size: 70px;
 		line-height: 1.5;
 	}
+	.play-button {
+		--button-width: 5.7em;
+	}
 `;
