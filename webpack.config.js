@@ -3,13 +3,13 @@ import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
-	mode: 'development',
+	mode: isProduction ? 'production' : 'development',
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/CookieClicker/',
 		filename: 'bundle.js',
 	},
 	module: {
