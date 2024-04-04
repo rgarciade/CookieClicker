@@ -235,10 +235,10 @@ exports[`identify-container-element identify-container matches the snapshot 1`] 
 		.play-button {
 			--button-width: 4.3em;
 		}
-        .bests p{
-            font-size: 30px;
-            padding-top: 2em;
-        }
+		.bests p {
+			font-size: 30px;
+			padding-top: 2em;
+		}
 	}
 [0m
 [36m</style>[39m",
