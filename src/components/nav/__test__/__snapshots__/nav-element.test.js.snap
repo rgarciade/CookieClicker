@@ -7,9 +7,13 @@ exports[`nav-element nav matches the snapshot 1`] = `
   [36m<p>[39m
     [0m1[0m
   [36m</p>[39m
+  [0m
+				[0m
   [36m<p>[39m
     [0m2[0m
   [36m</p>[39m
+  [0m
+				[0m
   [36m<p>[39m
     [0m3[0m
   [36m</p>[39m
