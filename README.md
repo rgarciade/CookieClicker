@@ -29,6 +29,7 @@
 - Se ha optado por @lit-labs/router para poder crear una spa con sus rutas
 
 ### Decisiones especificas
+- se ha incorporado un segundo clicker, que tiene un precio mayor, pero agrega 45 clickers, solo se muestra cuando llega al valor requerido
 - Se ha creado la clase ScoresState dentro de la carpeta status, para poder tener un estado global centralizado en un componente, agregando facilidad de uso y mantenimiento.
 - Se ha separado la lógica del clicker en un componente llamado clicker, para poder reutilizarlo en cualquier parte de la aplicación y descongestionar el componente principal 'game-container'
 - Se puede navegar con el componente <navigate> y con el evento *router-navigate*, he querido usar ambas opciones, ya que así se puede ver como se puede navegar con un componente y con un evento.
