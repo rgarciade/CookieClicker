@@ -18,6 +18,8 @@ export const ScoresState = (superClass) => {
 				return num?.toString();
 			}
 		}
+		// las funciones que empiezan con _scores_ llevan este prefijo para que sean mas facilmente identificables
+		// al agregarla a otra clase como un mixin
 		_scores_sortScores = () => {
 			const newScores = Object.keys(this._scores_data)
 				.sort((a, b) => {

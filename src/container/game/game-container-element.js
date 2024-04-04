@@ -9,6 +9,7 @@ import '../../components/gameTitle/game-title-element.js';
 import { ScoresState } from '../../status/index.js';
 import { navigate } from '../../services/navigate/navigate-service.js';
 
+//ScoresState es un mixin que nos permite acceder a los scores del juego y modificarlos
 export class GameContainerElement extends ScoresState(LitElement) {
 	static get styles() {
 		return [gameStyle, commonStyle];
@@ -24,12 +25,14 @@ export class GameContainerElement extends ScoresState(LitElement) {
 	_initPlayerData() {
 		if (this.name == '') return;
 		let playerData = this._scores_getScoreByName(this.name);
+		//para que el clicker funcione necesita inicializarse cuando se tiene el nombre del jugador
 		this.clicker.initialize({
 			initialValue: playerData.value,
 			initialNumberOfClickers: playerData.numberOfClickers,
 		});
 	}
 	_updateClickerActualValue() {
+		//usamos requestUpdate para que se actualice el valor en el html
 		const oldVal = this.counterValue;
 		this.counterValue = this.clicker.actualValue;
 		this.requestUpdate('counterValue', oldVal);
@@ -85,8 +88,10 @@ export class GameContainerElement extends ScoresState(LitElement) {
 		this.megaClickersActualClickerPrice = 0;
 		this.megaClickersEnabled = false;
 
+		//definimos el servicio clicker sin inicializarlo, ya que no tenemos el nombre del jugador
 		this.clicker = new ClickerService({
 			updateStatusFunction: () => {
+				//actualizamos todos los valores modificables del componente
 				this._updateClickerActualValue();
 				this._updateClickerActualClickerPrice();
 				this._updateClickerBasicAutoClickerEnabled();
@@ -122,6 +127,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 		navigate(this, path);
 	}
 	render() {
+		// no e visto necesario dividir en más componentes la vista, si creciera y viera que se pueden reutilizar partes, crearía más componentes
 		return html`
 			<game-title-element class="game-title">
 				<icon-element icon="person"></icon-element>

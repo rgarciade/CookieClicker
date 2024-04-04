@@ -22,5 +22,10 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+    },
+    "globals": {
+        "describe": "readonly",
+        "it": "readonly",
+        "process": "readonly",
     }
 }
