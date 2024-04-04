@@ -2,6 +2,7 @@ const cacheElements = [
 	'/',
 	'/bundle.js',
 	'/645.bundle.js',
+	'/448.bundle.js',
 	'/sw.js',
 	'/identify',
 	'/game',
@@ -9,6 +10,10 @@ const cacheElements = [
 	'/public/manifest.json',
 	'src_router_js.bundle.js',
 	'node_modules_urlpattern-polyfill_index_js.bundle.js',
+	//https://fonts.googleapis.com/icon?family=Material+Icons
+	//https://fonts.gstatic.com/s/materialicons/v141/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2
+	'/2d8017489da689caedc1.woff2'
+
 ];
 const CACHE_NAME = 'app-game-cookie-v1.4';
 
@@ -20,7 +25,7 @@ self.addEventListener('install', function (event) {
 					console.log('Opened cache', cacheElements);
 					for (let i = 0; i < cacheElements.length; i++) {
 						const file = cacheElements[i]
-						cache.add(file).catch((error) =>console.error('fileerror', file,error))
+						cache.add(file).catch((error) =>console.log('fileerror', file,error))
 					}
 				});
 			}
@@ -37,10 +42,10 @@ self.addEventListener('fetch', function (event) {
 				fetch(event.request).then(r => {
 					return r;
 				}).catch(e => {
-					console.error('fetch error1', e);
+					console.log('fetch error1', e);
 				});
 			}catch (e) {
-				console.error('fetch error2', e);
+				console.log('fetch error2', e);
 			};
 		})
 	);
