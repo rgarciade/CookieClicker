@@ -31,8 +31,7 @@
     "javascript",
     "lit"
   ],
-  "author": "Google LLC",
-  "license": "BSD-3-Clause",
+  "author": "Raul garcia",
   "dependencies": {
     "@babel/core": "^7.24.1",
     "@lit-labs/router": "^0.1.3",
@@ -83,6 +82,5 @@
     "rollup-plugin-terser": "^7.0.2",
     "shadow-dom-testing-library": "^1.11.2",
     "style-loader": "^3.3.4"
-  },
-  "customElements": "custom-elements.json"
+  }
 }
