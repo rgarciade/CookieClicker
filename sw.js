@@ -11,11 +11,10 @@ const cacheElements = [
 	'/public/manifest.json',
 	'src_router_js.bundle.js',
 	'node_modules_urlpattern-polyfill_index_js.bundle.js',
-	//https://fonts.googleapis.com/icon?family=Material+Icons
-	//https://fonts.gstatic.com/s/materialicons/v141/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2
-	'/2d8017489da689caedc1.woff2'
-
+	'/2d8017489da689caedc1.woff2',
 ];
+//https://fonts.googleapis.com/icon?family=Material+Icons
+//https://fonts.gstatic.com/s/materialicons/v141/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2
 const CACHE_NAME = 'app-game-cookie-v1.4';
 
 self.addEventListener('install', function (event) {
@@ -25,8 +24,10 @@ self.addEventListener('install', function (event) {
 				caches.open(CACHE_NAME).then(function (cache) {
 					console.log('Opened cache', cacheElements);
 					for (let i = 0; i < cacheElements.length; i++) {
-						const file = cacheElements[i]
-						cache.add(file).catch((error) =>console.log('fileerror', file,error))
+						const file = cacheElements[i];
+						cache
+							.add(file)
+							.catch((error) => console.log('fileerror', file, error));
 					}
 				});
 			}
@@ -40,14 +41,16 @@ self.addEventListener('fetch', function (event) {
 				if (response) {
 					return response;
 				}
-				fetch(event.request).then(r => {
-					return r;
-				}).catch(e => {
-					console.log('fetch error1', e);
-				});
-			}catch (e) {
+				fetch(event.request)
+					.then((r) => {
+						return r;
+					})
+					.catch((e) => {
+						console.log('fetch error1', e);
+					});
+			} catch (e) {
 				console.log('fetch error2', e);
-			};
+			}
 		})
 	);
 });
