@@ -13,7 +13,7 @@ const cacheElements = [
 	'node_modules_urlpattern-polyfill_index_js.bundle.js',
 	'/2d8017489da689caedc1.woff2',
 ];
-const CACHE_NAME = 'app-game-cookie-v1.4';
+const CACHE_NAME = 'app-game-cookie-v1.5';
 
 self.addEventListener('install', function (event) {
 	event.waitUntil(
