@@ -27,5 +27,6 @@ module.exports = {
         "describe": "readonly",
         "it": "readonly",
         "process": "readonly",
+        "global": "readonly",
     }
 }

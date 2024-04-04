@@ -1,6 +1,7 @@
 # Prueba técnica BBVA autoclicker
 
-https://bbvaengineering.github.io/challenges/autoclicker/
+<a href="https://bbvaengineering.github.io/challenges/autoclicker/" target="_blank">https://bbvaengineering.github.io/challenges/autoclicker/</a>
+
 
 
 ## Requisitos propuestos
@@ -8,7 +9,7 @@ https://bbvaengineering.github.io/challenges/autoclicker/
 - [x] El código debe ser público
 - [x] Se deberán realizar tests unitarios de las vistas y de los componentes de la aplicación.
 - [x] Se podrá utilizar cualquier infraestructura de alojamiento pública como, por ejemplo, ***Vercel***, Netlify o Github Pages.
-  Url App: https://cookie-clicker-phi.vercel.app
+  Url App: <a href="https://cookie-clicker-phi.vercel.app" target="_blank">https://cookie-clicker-phi.vercel.app</a>
 - [x] Se debe subir un fichero README.md al repositorio con las instrucciones para hacer funcionar la aplicación en local. Puedes añadir cualquier otro dato que consideres necesario.
 
 ## Tambien:

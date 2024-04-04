@@ -1,0 +1,604 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`game-container-element game-container matches the snapshot 1`] = `
+[
+  "[36m<game-container-element[39m
+  [33mname[39m=[32m"nombre test"[39m
+[36m/>[39m",
+  "ShadowRoot {}",
+  "ShadowRoot {}",
+  "[36m<slot />[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		font-size: 70px;
+		color: var(--text-color, black);
+		display: flex;
+		gap: 40px;
+		justify-content: flex-start;
+
+		background-color: var(--background-color, white);
+	}
+	.game-title :last-child {
+		margin-left: auto;
+		padding-right: 20px;
+	}
+	.game-title :first-child {
+		padding-left: 20px;
+	}
+
+	:host ::slotted(*) {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		line-height: 0.2;
+	}
+
+	:host ::slotted(*:last-child) {
+		margin-left: auto;
+		padding-right: 40px;
+	}
+	:host ::slotted(*:first-child) {
+		padding-left: 40px;
+	}
+[0m
+[36m</style>[39m",
+  "ShadowRoot {}",
+  "[36m<i[39m
+  [33mclass[39m=[32m"material-icons"[39m
+[36m>[39m
+  [0mperson[0m
+[36m</i>[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		--mdc-icon-size: 24px;
+	}
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: var(--icon-size, 120px); /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		color: var(--icon-color, white);
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+[0m
+[36m</style>[39m",
+  "[36m<p>[39m
+  [0mnombre test[0m
+[36m</p>[39m",
+  "ShadowRoot {}",
+  "[36m<i[39m
+  [33mclass[39m=[32m"material-icons"[39m
+[36m>[39m
+  [0mlogout[0m
+[36m</i>[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		--mdc-icon-size: 24px;
+	}
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: var(--icon-size, 120px); /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		color: var(--icon-color, white);
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+[0m
+[36m</style>[39m",
+  "[36m<div[39m
+  [33mclass[39m=[32m"container"[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<div[39m
+    [33mclass[39m=[32m"game-text"[39m
+  [36m>[39m
+    [0m
+					[0m
+    [36m<p>[39m
+      [0mMerge Pull Request: [0m
+      [36m<span>[39m
+        [0m0[0m
+      [36m</span>[39m
+    [36m</p>[39m
+    [0m
+					[0m
+    [36m<p>[39m
+      [0mAuto mergers: [0m
+      [0m0[0m
+    [36m</p>[39m
+    [0m
+				[0m
+  [36m</div>[39m
+  [0m
+
+				[0m
+  [36m<button-element>[39m
+    [0m
+					[0m
+    [36m<icon-element[39m
+      [33micon[39m=[32m"merge_type"[39m
+    [36m/>[39m
+    [0m
+					Add 1
+				[0m
+  [36m</button-element>[39m
+  [0m
+				[0m
+  [36m<div[39m
+    [33mclass[39m=[32m"auto-clicker-group"[39m
+  [36m>[39m
+    [0m
+					[0m
+    [36m<button-element[39m
+      [33mclass[39m=[32m"small-clicker"[39m
+      [33mdisabled[39m=[32m""[39m
+    [36m>[39m
+      [0m
+						[0m
+      [36m<icon-element[39m
+        [33micon[39m=[32m"merge_type"[39m
+      [36m/>[39m
+      [0m
+						Add clicker: [0m
+      [0m50[0m
+      [0m
+					[0m
+    [36m</button-element>[39m
+    [0m
+					[0m
+    [36m<button-element[39m
+      [33mclass[39m=[32m"big-clicker"[39m
+      [33mdisabled[39m=[32m""[39m
+    [36m>[39m
+      [0m
+						[0m
+      [36m<icon-element[39m
+        [33micon[39m=[32m"merge_type"[39m
+      [36m/>[39m
+      [0m
+						Add Mega clicker: [0m
+      [0m1000[0m
+      [0m
+					[0m
+    [36m</button-element>[39m
+    [0m
+				[0m
+  [36m</div>[39m
+  [0m
+			[0m
+[36m</div>[39m",
+  "[36m<div[39m
+  [33mclass[39m=[32m"game-text"[39m
+[36m>[39m
+  [0m
+					[0m
+  [36m<p>[39m
+    [0mMerge Pull Request: [0m
+    [36m<span>[39m
+      [0m0[0m
+    [36m</span>[39m
+  [36m</p>[39m
+  [0m
+					[0m
+  [36m<p>[39m
+    [0mAuto mergers: [0m
+    [0m0[0m
+  [36m</p>[39m
+  [0m
+				[0m
+[36m</div>[39m",
+  "[36m<p>[39m
+  [0mMerge Pull Request: [0m
+  [36m<span>[39m
+    [0m0[0m
+  [36m</span>[39m
+[36m</p>[39m",
+  "[36m<span>[39m
+  [0m0[0m
+[36m</span>[39m",
+  "[36m<p>[39m
+  [0mAuto mergers: [0m
+  [0m0[0m
+[36m</p>[39m",
+  "ShadowRoot {}",
+  "[36m<button[39m
+  [33mclass[39m=[32m"primary long"[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<slot />[39m
+  [0m
+			[0m
+[36m</button>[39m",
+  "[36m<slot />[39m",
+  "[36m<style>[39m
+  [0m
+	button {
+		border-radius: 12px;
+		background-color: var(--color-primario);
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: var(--button-font-size, 76px);
+		margin: 4px 2px;
+		cursor: pointer;
+		width: var(--button-width, '2px');
+		min-width: var(--button-width, '2px');
+		height: var(--button-height, '2px');
+	}
+	button:disabled {
+		background-color: grey;
+	}
+	.primary {
+		background-color: var(--color-primario, blue);
+	}
+	.secondary {
+		background-color: var(--color-secundario, red);
+	}
+	.long {
+		width: 100%;
+	}
+	.short {
+		width: 50%;
+	}
+[0m
+[36m</style>[39m",
+  "ShadowRoot {}",
+  "[36m<i[39m
+  [33mclass[39m=[32m"material-icons"[39m
+[36m>[39m
+  [0mmerge_type[0m
+[36m</i>[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		--mdc-icon-size: 24px;
+	}
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: var(--icon-size, 120px); /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		color: var(--icon-color, white);
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+[0m
+[36m</style>[39m",
+  "[36m<div[39m
+  [33mclass[39m=[32m"auto-clicker-group"[39m
+[36m>[39m
+  [0m
+					[0m
+  [36m<button-element[39m
+    [33mclass[39m=[32m"small-clicker"[39m
+    [33mdisabled[39m=[32m""[39m
+  [36m>[39m
+    [0m
+						[0m
+    [36m<icon-element[39m
+      [33micon[39m=[32m"merge_type"[39m
+    [36m/>[39m
+    [0m
+						Add clicker: [0m
+    [0m50[0m
+    [0m
+					[0m
+  [36m</button-element>[39m
+  [0m
+					[0m
+  [36m<button-element[39m
+    [33mclass[39m=[32m"big-clicker"[39m
+    [33mdisabled[39m=[32m""[39m
+  [36m>[39m
+    [0m
+						[0m
+    [36m<icon-element[39m
+      [33micon[39m=[32m"merge_type"[39m
+    [36m/>[39m
+    [0m
+						Add Mega clicker: [0m
+    [0m1000[0m
+    [0m
+					[0m
+  [36m</button-element>[39m
+  [0m
+				[0m
+[36m</div>[39m",
+  "ShadowRoot {}",
+  "[36m<button[39m
+  [33mclass[39m=[32m"primary long"[39m
+  [33mdisabled[39m=[32m""[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<slot />[39m
+  [0m
+			[0m
+[36m</button>[39m",
+  "[36m<slot />[39m",
+  "[36m<style>[39m
+  [0m
+	button {
+		border-radius: 12px;
+		background-color: var(--color-primario);
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: var(--button-font-size, 76px);
+		margin: 4px 2px;
+		cursor: pointer;
+		width: var(--button-width, '2px');
+		min-width: var(--button-width, '2px');
+		height: var(--button-height, '2px');
+	}
+	button:disabled {
+		background-color: grey;
+	}
+	.primary {
+		background-color: var(--color-primario, blue);
+	}
+	.secondary {
+		background-color: var(--color-secundario, red);
+	}
+	.long {
+		width: 100%;
+	}
+	.short {
+		width: 50%;
+	}
+[0m
+[36m</style>[39m",
+  "ShadowRoot {}",
+  "[36m<i[39m
+  [33mclass[39m=[32m"material-icons"[39m
+[36m>[39m
+  [0mmerge_type[0m
+[36m</i>[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		--mdc-icon-size: 24px;
+	}
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: var(--icon-size, 120px); /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		color: var(--icon-color, white);
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+[0m
+[36m</style>[39m",
+  "ShadowRoot {}",
+  "[36m<button[39m
+  [33mclass[39m=[32m"primary long"[39m
+  [33mdisabled[39m=[32m""[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<slot />[39m
+  [0m
+			[0m
+[36m</button>[39m",
+  "[36m<slot />[39m",
+  "[36m<style>[39m
+  [0m
+	button {
+		border-radius: 12px;
+		background-color: var(--color-primario);
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: var(--button-font-size, 76px);
+		margin: 4px 2px;
+		cursor: pointer;
+		width: var(--button-width, '2px');
+		min-width: var(--button-width, '2px');
+		height: var(--button-height, '2px');
+	}
+	button:disabled {
+		background-color: grey;
+	}
+	.primary {
+		background-color: var(--color-primario, blue);
+	}
+	.secondary {
+		background-color: var(--color-secundario, red);
+	}
+	.long {
+		width: 100%;
+	}
+	.short {
+		width: 50%;
+	}
+[0m
+[36m</style>[39m",
+  "ShadowRoot {}",
+  "[36m<i[39m
+  [33mclass[39m=[32m"material-icons"[39m
+[36m>[39m
+  [0mmerge_type[0m
+[36m</i>[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		--mdc-icon-size: 24px;
+	}
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: var(--icon-size, 120px); /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		color: var(--icon-color, white);
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+[0m
+[36m</style>[39m",
+  "[36m<style>[39m
+  [0m
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 55vh;
+		font-size: 40px;
+		gap: 20px;
+	}
+	.auto-clicker-group {
+		display: flex;
+		gap: 20px;
+		max-width: 19em;
+	}
+	.game-text {
+		font-size: 60px;
+		margin: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.game-text p {
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	.go-identify {
+		cursor: pointer;
+	}
+	.small-clicker {
+		--button-height: 5.6em;
+		--button-font-size: 40px;
+		--icon-size: 70px;
+	}
+	.big-clicker {
+		--button-height: 5.6em;
+		--button-font-size: 40px;
+		--icon-size: 70px;
+	}
+	.game-title {
+		--background-color: #262626;
+	}
+[0m
+[36m</style>[39m",
+  "[36m<style>[39m
+  [0m
+	input {
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 5px;
+		width: 70px;
+	}
+	input {
+		font-size: 56px;
+		padding: var(--spacing, 20px);
+		border-radius: 12px;
+		border: 1px solid black;
+	}
+	h1 {
+		font-size: 56px;
+	}
+	select {
+		font-size: 36px;
+	}
+[0m
+[36m</style>[39m",
+]
+`;

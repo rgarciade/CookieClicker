@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav-element nav matches the snapshot 1`] = `
+"[36m<navelement[39m
+  [33micon[39m=[32m"person"[39m
+[36m>[39m
+  [36m<p>[39m
+    [0m1[0m
+  [36m</p>[39m
+  [36m<p>[39m
+    [0m2[0m
+  [36m</p>[39m
+  [36m<p>[39m
+    [0m3[0m
+  [36m</p>[39m
+[36m</navelement>[39m"
+`;

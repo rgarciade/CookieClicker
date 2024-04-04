@@ -32,7 +32,12 @@ export class NavElement extends LitElement {
 	}
 	render() {
 		return html`
-			<a href="${this.href}" @click="${this._navigate}"> <slot></slot></a>
+			<a
+				href="${this.href}"
+				@click="${this._navigate}"
+				aria-label="enlace a ${this.href}"
+				><slot></slot
+			></a>
 		`;
 	}
 }

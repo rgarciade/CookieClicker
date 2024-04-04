@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`identify-container-element identify-container matches the snapshot 1`] = `
+[
+  "[36m<identify-container-element />[39m",
+  "ShadowRoot {}",
+  "[36m<div[39m
+  [33mclass[39m=[32m"title"[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<h2>[39m
+    [0m
+					[0m
+    [36m<icon-element[39m
+      [33mclass[39m=[32m"icon-start"[39m
+      [33micon[39m=[32m"star"[39m
+    [36m/>[39m
+    [0m
+					The Bests
+				[0m
+  [36m</h2>[39m
+  [0m
+			[0m
+[36m</div>[39m",
+  "[36m<h2>[39m
+  [0m
+					[0m
+  [36m<icon-element[39m
+    [33mclass[39m=[32m"icon-start"[39m
+    [33micon[39m=[32m"star"[39m
+  [36m/>[39m
+  [0m
+					The Bests
+				[0m
+[36m</h2>[39m",
+  "ShadowRoot {}",
+  "[36m<i[39m
+  [33mclass[39m=[32m"material-icons"[39m
+[36m>[39m
+  [0mstar[0m
+[36m</i>[39m",
+  "[36m<style>[39m
+  [0m
+	:host {
+		--mdc-icon-size: 24px;
+	}
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: var(--icon-size, 120px); /* Preferred icon size */
+		display: inline-block;
+		line-height: 1;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		color: var(--icon-color, white);
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+[0m
+[36m</style>[39m",
+  "[36m<div[39m
+  [33mclass[39m=[32m"container"[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<div[39m
+    [33mclass[39m=[32m"bests"[39m
+  [36m>[39m
+    [36m<p>[39m
+      [0mNo scores yet[0m
+    [36m</p>[39m
+  [36m</div>[39m
+  [0m
+				[0m
+  [0m
+				[0m
+  [36m<input[39m
+    [33mplaceholder[39m=[32m"Gamer Name"[39m
+  [36m/>[39m
+  [0m
+				[0m
+  [36m<button-element[39m
+    [33mclass[39m=[32m"play-button"[39m
+    [33mtext[39m=[32m"Join game"[39m
+  [36m>[39m
+    [0m
+					Play
+				[0m
+  [36m</button-element>[39m
+  [0m
+			[0m
+[36m</div>[39m",
+  "[36m<div[39m
+  [33mclass[39m=[32m"bests"[39m
+[36m>[39m
+  [36m<p>[39m
+    [0mNo scores yet[0m
+  [36m</p>[39m
+[36m</div>[39m",
+  "[36m<p>[39m
+  [0mNo scores yet[0m
+[36m</p>[39m",
+  "[36m<input[39m
+  [33mplaceholder[39m=[32m"Gamer Name"[39m
+[36m/>[39m",
+  "ShadowRoot {}",
+  "[36m<button[39m
+  [33mclass[39m=[32m"primary long"[39m
+[36m>[39m
+  [0m
+				[0m
+  [36m<slot />[39m
+  [0m
+			[0m
+[36m</button>[39m",
+  "[36m<slot />[39m",
+  "[36m<style>[39m
+  [0m
+	button {
+		border-radius: 12px;
+		background-color: var(--color-primario);
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: var(--button-font-size, 76px);
+		margin: 4px 2px;
+		cursor: pointer;
+		width: var(--button-width, '2px');
+		min-width: var(--button-width, '2px');
+		height: var(--button-height, '2px');
+	}
+	button:disabled {
+		background-color: grey;
+	}
+	.primary {
+		background-color: var(--color-primario, blue);
+	}
+	.secondary {
+		background-color: var(--color-secundario, red);
+	}
+	.long {
+		width: 100%;
+	}
+	.short {
+		width: 50%;
+	}
+[0m
+[36m</style>[39m",
+  "[36m<style>[39m
+  [0m
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 55vh;
+		font-size: 56px;
+		gap: 80px;
+	}
+	input {
+		min-width: 7em;
+	}
+	.bests {
+		min-height: 34vh;
+	}
+	.title {
+		font-size: 110px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.title h2 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0px;
+	}
+
+	.error-span {
+		font-size: 40px;
+		color: red;
+		font-weight: 600;
+	}
+	ol {
+		font-size: 70px;
+		line-height: 1.5;
+	}
+	.play-button {
+		--button-width: 5.7em;
+	}
+	.icon-start {
+		--icon-color: red;
+	}
+[0m
+[36m</style>[39m",
+  "[36m<style>[39m
+  [0m
+	input {
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 5px;
+		width: 70px;
+	}
+	input {
+		font-size: 56px;
+		padding: var(--spacing, 20px);
+		border-radius: 12px;
+		border: 1px solid black;
+	}
+	h1 {
+		font-size: 56px;
+	}
+	select {
+		font-size: 36px;
+	}
+[0m
+[36m</style>[39m",
+]
+`;

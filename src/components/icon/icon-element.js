@@ -18,7 +18,7 @@ export class IconElement extends LitElement {
 		super();
 	}
 	render() {
-		return html` <i class="material-icons">${this.icon}</i> `;
+		return html`<i class="material-icons">${this.icon}</i>`;
 	}
 }
 window.customElements.define('icon-element', IconElement);
