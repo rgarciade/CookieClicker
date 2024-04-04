@@ -71,7 +71,7 @@ npm run dev
 ```bash
 http://localhost:9003/
 ```
-- si se quiere probar la pwa en ios, se debe acceder al archivo webpack.config.js
+- si tiene algún problema con el https en develop, cámbialo por http. Para ello acceder al archivo webpack.config.js
   y cambiar el valor de la propiedad server: 'http', por server: 'https', y volver a iniciar la aplicación.
 
 ### para lanzar los tests

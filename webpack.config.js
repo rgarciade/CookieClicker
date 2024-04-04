@@ -53,7 +53,7 @@ export default {
 		static: {
 			directory: path.join(__dirname, 'dist'),
 		},
-		server: 'http',
+		server: 'https',
 		compress: true,
 		port: 9003,
 		historyApiFallback: true,
