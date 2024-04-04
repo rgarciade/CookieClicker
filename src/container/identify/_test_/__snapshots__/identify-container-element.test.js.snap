@@ -210,6 +210,15 @@ exports[`identify-container-element identify-container matches the snapshot 1`] 
 	.icon-start {
 		--icon-color: red;
 	}
+	@media only screen and (max-width: 1080px) {
+		.title {
+			font-size: 50px;
+		}
+		ol {
+			font-size: 49px;
+			padding-top: 1em;
+		}
+	}
 [0m
 [36m</style>[39m",
   "[36m<style>[39m

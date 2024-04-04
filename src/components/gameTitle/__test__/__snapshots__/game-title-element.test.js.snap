@@ -8,7 +8,7 @@ exports[`game-title-element matches the snapshot 1`] = `
   <style>
     
 	:host {
-		font-size: 70px;
+		font-size: var(--title-font-size, 70px);
 		color: var(--text-color, black);
 		display: flex;
 		gap: 40px;

@@ -11,7 +11,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
   "[36m<style>[39m
   [0m
 	:host {
-		font-size: 70px;
+		font-size: var(--title-font-size, 70px);
 		color: var(--text-color, black);
 		display: flex;
 		gap: 40px;
@@ -150,7 +150,9 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
   [0m
 
 				[0m
-  [36m<button-element>[39m
+  [36m<button-element[39m
+    [33mclass[39m=[32m"individual-clicker"[39m
+  [36m>[39m
     [0m
 					[0m
     [36m<icon-element[39m
@@ -169,7 +171,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
 					[0m
     [36m<button-element[39m
       [33mclass[39m=[32m"small-clicker"[39m
-      [33mdisabled[39m=[32m""[39m
+      [33mhidden[39m=[32m""[39m
     [36m>[39m
       [0m
 						[0m
@@ -186,7 +188,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
 					[0m
     [36m<button-element[39m
       [33mclass[39m=[32m"big-clicker"[39m
-      [33mdisabled[39m=[32m""[39m
+      [33mhidden[39m=[32m""[39m
     [36m>[39m
       [0m
 						[0m
@@ -329,7 +331,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
 					[0m
   [36m<button-element[39m
     [33mclass[39m=[32m"small-clicker"[39m
-    [33mdisabled[39m=[32m""[39m
+    [33mhidden[39m=[32m""[39m
   [36m>[39m
     [0m
 						[0m
@@ -346,7 +348,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
 					[0m
   [36m<button-element[39m
     [33mclass[39m=[32m"big-clicker"[39m
-    [33mdisabled[39m=[32m""[39m
+    [33mhidden[39m=[32m""[39m
   [36m>[39m
     [0m
 						[0m
@@ -365,7 +367,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
   "ShadowRoot {}",
   "[36m<button[39m
   [33mclass[39m=[32m"primary long"[39m
-  [33mdisabled[39m=[32m""[39m
+  [33mhidden[39m=[32m""[39m
 [36m>[39m
   [0m
 				[0m
@@ -450,7 +452,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
   "ShadowRoot {}",
   "[36m<button[39m
   [33mclass[39m=[32m"primary long"[39m
-  [33mdisabled[39m=[32m""[39m
+  [33mhidden[39m=[32m""[39m
 [36m>[39m
   [0m
 				[0m
@@ -547,6 +549,7 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
 		display: flex;
 		gap: 20px;
 		max-width: 19em;
+		min-height: 6em;
 	}
 	.game-text {
 		font-size: 60px;
@@ -575,6 +578,20 @@ exports[`game-container-element game-container matches the snapshot 1`] = `
 	}
 	.game-title {
 		--background-color: #262626;
+	}
+
+	@media only screen and (max-width: 1080px) {
+		.game-title {
+			--icon-size: 60px;
+			--title-font-size: 70px;
+		}
+		.game-text {
+			font-size: 42px;
+		}
+		.individual-clicker {
+			--button-font-size: 50px;
+			--icon-size: 60px;
+		}
 	}
 [0m
 [36m</style>[39m",
