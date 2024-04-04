@@ -7,23 +7,16 @@
   "scripts": {
     "build": "webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint '**/*.js'",
     "lint:lit-analyzer": "lit-analyzer my-element.js",
     "lit:fix": "eslint . --fix",
     "prepare": "husky install",
     "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
-    "analyze": "cem analyze --litelement --globs \"**/*.js\" --exclude docs",
-    "analyze:watch": "cem analyze --litelement --globs \"**/*.js\" --exclude docs --watch",
     "dev": "webpack serve",
     "prod": "webpack --config ./webpack.config.js",
     "test": "jest",
     "test:coverage": "jest --no-cache --coverage",
-    "test:watch": "wtr --watch",
-    "test:prod": "MODE=prod wtr",
-    "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
     "lint-staged": "echo 'lint-staged is running!' && lint-staged"
   },
   "lint-staged": {
