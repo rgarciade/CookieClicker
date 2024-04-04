@@ -46,4 +46,13 @@ export const identifyStyle = css`
 	.icon-start {
 		--icon-color: red;
 	}
+	@media only screen and (max-width: 1080px) {
+		.title {
+			font-size: 50px;
+		}
+		ol {
+			font-size: 49px;
+			padding-top: 1em;
+		}
+	}
 `;

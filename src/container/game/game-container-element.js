@@ -130,7 +130,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 		// no e visto necesario dividir en más componentes la vista, si creciera y viera que se pueden reutilizar partes, crearía más componentes
 		return html`
 			<game-title-element class="game-title">
-				<icon-element icon="person"></icon-element>
+				<icon-element icon="person" class="person"></icon-element>
 				<p>${this.name}</p>
 				<icon-element
 					class="go-identify"
@@ -144,14 +144,14 @@ export class GameContainerElement extends ScoresState(LitElement) {
 					<p>Auto mergers: ${this.numberOfClickers}</p>
 				</div>
 
-				<button-element @click="${this.addOne}">
+				<button-element @click="${this.addOne}" class="individual-clicker">
 					<icon-element icon="merge_type"></icon-element>
 					Add 1
 				</button-element>
 				<div class="auto-clicker-group">
 					<button-element
 						class="small-clicker"
-						?disabled="${!this.basicAutoClickerEnabled}"
+						?hidden="${!this.basicAutoClickerEnabled}"
 						@click="${this.buyClicker}"
 					>
 						<icon-element icon="merge_type"></icon-element>
@@ -159,7 +159,7 @@ export class GameContainerElement extends ScoresState(LitElement) {
 					</button-element>
 					<button-element
 						class="big-clicker"
-						?disabled="${!this.megaClickersEnabled}"
+						?hidden="${!this.megaClickersEnabled}"
 						@click="${this.buyMegaClicker}"
 					>
 						<icon-element icon="merge_type"></icon-element>

@@ -14,6 +14,7 @@ export class ButtonElement extends LitElement {
 			type: { type: String },
 			lengthType: { type: String },
 			disabled: { type: Boolean },
+			hidden: { type: Boolean },
 		};
 	}
 
@@ -42,6 +43,7 @@ export class ButtonElement extends LitElement {
 				class="${this.buttonType()}"
 				?disabled="${this.disabled}"
 				@click="${this._onClick}"
+				?hidden="${this.hidden}"
 			>
 				<slot></slot>
 			</button>

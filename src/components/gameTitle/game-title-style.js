@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export const gameTitleStyle = css`
 	:host {
-		font-size: 70px;
+		font-size: var(--title-font-size, 70px);
 		color: var(--text-color, black);
 		display: flex;
 		gap: 40px;
