@@ -34,6 +34,8 @@
 - Se puede navegar con el componente <navigate> y con el evento *router-navigate*, he querido usar ambas opciones, ya que así se puede ver como se puede navegar con un componente y con un evento.
 - Los test están ubicados a la altura del mismo componente para facilitar su mantenimiento y lectura.
 - Se han creado tests básicos para demostrar el uso de jest, jest-axe, jest-dom y shadow-dom-testing-library.
+- Sobre el funcionamiento del clicker, se va actualizando el valor en un único intervalo de 100 ms en la función *initializeClickers()*, que actualiza el valor actual, con el valor del número de clickers, el cual se actualiza cuando se pulsa algún botón,
+  por otra parte, hay que definir en el constructor la función updateStatusFunction, la cual se encarga de actualizar el estado de los componentes de la vista y el estado global de la aplicación.
 
 ## Tecnologias utilizadas
 
