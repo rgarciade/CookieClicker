@@ -15,7 +15,9 @@
     <script>
         if (location.protocol === 'https:') {
             navigator.serviceWorker.getRegistration('./').then(function(registration) {
+                debugger
                 if (!registration) {
+                    debugger
                     navigator.serviceWorker.register('/sw.js', {
                         scope: './'
                     });
