@@ -55,4 +55,21 @@ export const identifyStyle = css`
 			padding-top: 1em;
 		}
 	}
+	@media only screen and (max-width: 550px) {
+		.title {
+			font-size: 30px;
+			--icon-size: 50px;
+		}
+		ol {
+			font-size: 30px;
+			padding-top: 3em;
+		}
+		input {
+			font-size: 26px !important;
+			min-width: 11em;
+		}
+		.play-button {
+			--button-width: 4.3em;
+		}
+	}
 `;
