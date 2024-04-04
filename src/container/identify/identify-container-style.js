@@ -71,5 +71,9 @@ export const identifyStyle = css`
 		.play-button {
 			--button-width: 4.3em;
 		}
+		.bests p {
+			font-size: 30px;
+			padding-top: 2em;
+		}
 	}
 `;
