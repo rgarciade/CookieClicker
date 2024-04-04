@@ -3,7 +3,6 @@
 <a href="https://bbvaengineering.github.io/challenges/autoclicker/" target="_blank">https://bbvaengineering.github.io/challenges/autoclicker/</a>
 
 
-
 ## Requisitos propuestos
 - [x] La aplicación deberá contener funcionalmente, como mínimo, las instrucciones detalladas en el enunciado.
 - [x] El código debe ser público
@@ -18,6 +17,23 @@
 - [x] Se ha utilizado un pre-commit para lanzar el linter antes de realizar un commit.
 - [x] Se ha utilizado un pre-push para lanzar los test antes de realizar un push.
 
+
+## Decisiones tomadas respecto a la implementación
+  ### Tecnologias
+- Se ha utilizado lit-element para la creación de componentes web, ya que es una librería que permite la creación de componentes web de forma sencilla.
+- Se ha utilizado webpack para empaquetar la aplicación, ya que es una herramienta que permite empaquetar la aplicación en un único archivo de forma sencilla, y así crear la pwa más fácilmente.
+- Se ha usado Jest ya que es un framework sencillo y muy utilizado
+- Se ha utilizado jest-axe para realizar test de accesibilidad, ya que es una herramienta que permite realizar test de accesibilidad de forma sencilla.
+- Se ha optado por utilizar shadow-dom-testing-library para realizar test de componentes web que contengan shadow dom.
+- Se ha usado husky para lanzar prettier y el linter antes del commit y los test antes de realizar un push "así evitamos que se suban test fallidos, y se mantenga la calidad del código".
+- Se ha optado por @lit-labs/router para poder crear una spa con sus rutas
+
+### Decisiones especificas
+- Se ha creado la clase ScoresState dentro de la carpeta status, para poder tener un estado global centralizado en un componente, agregando facilidad de uso y mantenimiento.
+- Se ha separado la lógica del clicker en un componente llamado clicker, para poder reutilizarlo en cualquier parte de la aplicación y descongestionar el componente principal 'game-container'
+- Se puede navegar con el componente <navigate> y con el evento *router-navigate*, he querido usar ambas opciones, ya que así se puede ver como se puede navegar con un componente y con un evento.
+- Los test están ubicados a la altura del mismo componente para facilitar su mantenimiento y lectura.
+- Se han creado tests básicos para demostrar el uso de jest, jest-axe, jest-dom y shadow-dom-testing-library.
 
 ## Tecnologias utilizadas
 
